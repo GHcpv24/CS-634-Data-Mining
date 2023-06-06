@@ -1,1 +1,1 @@
-# CS-634-Data-Mining
+# CS 634 Assignments
