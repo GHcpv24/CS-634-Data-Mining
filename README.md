@@ -12,7 +12,7 @@ Set up a development environment in your laptop. Learn the basics of docker by w
 
 [![Watch the video](https://img.youtube.com/vi/pTFZFxd4hOI/0.jpg)](https://youtu.be/pTFZFxd4hOI)
 
-If you are on Windows you will need to follow these instructions and install Docker Desktop and WSL2.
+If you are on Windows you will need to follow [these instructions](https://docs.docker.com/desktop/windows/wsl/) and install [Docker Desktop](https://www.docker.com/products/docker-desktop/) and [WSL2](https://learn.microsoft.com/en-us/windows/wsl/install).
 
 Independent of your OS, you may want to use VS Code IDE if you have no IDE experience before.
 
