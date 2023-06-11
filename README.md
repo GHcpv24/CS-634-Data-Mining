@@ -29,6 +29,8 @@ I also used the following:
 - [WSL2 Linux kernel Update](https://learn.microsoft.com/en-us/windows/wsl/install-manual#step-4---download-the-linux-kernel-update-package)
 - [Docker remote containers on WSL2](https://learn.microsoft.com/en-us/windows/wsl/tutorials/wsl-containers)
 
+<br>
+
 ## Prerequisites
 ### Verify Windows version
 
@@ -70,6 +72,8 @@ wsl --set-default-version 2
 
 Ensure that you have the latest WSL2 Linux kernel by navigating to the following link and downloading `wsl_update_x64.msi`: [Step 4 - Download the Linux kernel update package](https://learn.microsoft.com/en-us/windows/wsl/install-manual#step-4---download-the-linux-kernel-update-package)
 
+<br>
+
 ## Download, Installation, and Configuration of Docker Desktop
 
 1. Navigate to [this link](https://www.docker.com/products/docker-desktop/) to install Docker Desktop
@@ -92,9 +96,11 @@ docker version
 
 ![image](https://github.com/GHcpv24/CS-634-Data-Mining/assets/106451112/dd9709a2-939a-4f56-8825-45036d0cb0f3)
 
-### Create example "Getting Started" container using Visual Studio Code (VS Code)
+<br>
 
-I had created a "Getting Started" docker remote container using VS Code by following the steps as indicated in [this tutorial](https://learn.microsoft.com/en-us/visualstudio/docker/tutorials/docker-tutorial) by Microsoft.
+## Create example "Getting Started" container using Visual Studio Code (VS Code)
+
+I had created a "Getting Started" docker container using VS Code by following the steps as indicated in [this tutorial](https://learn.microsoft.com/en-us/visualstudio/docker/tutorials/docker-tutorial).
 
 1. In VS Code, make sure that you've installed `Docker` under `Extensions`
 2. Open a `New Terminal` under `Terminal` and enter the following command:
@@ -109,6 +115,41 @@ docker run -d -p 80:80 docker/getting-started
 
 4. Open a browser and go to `http://localhost/tutorial/`
 
+<br>
 
+## Create example "Hello World" docker container
 
+I had created a "Hello World" docker container by following the steps as indicated in the [video](https://youtu.be/pTFZFxd4hOI) as provided in the beginning under the Milestone 1 deliverables.
 
+1. Open Windows PowerShell and create a directory to place your "Hello World" docker container using the `mkdir` command
+2. Go to the folder by using the `cd` command and then use the `code .` command to open the Visual Studio Code editor
+3. In VS Code, create a new file and name it `app.js` and enter the follow line of code:
+
+```js
+console.log("Hello World!");
+```
+
+4. Create a new file called `Dockerfile` and enter the following lines of code:
+
+```
+FROM node:alpine
+COPY . /app
+WORKDIR /app
+CMD node app.js
+```
+
+5. Back in PowerShell, enter the following command within the directory containing your docker file:
+
+```
+docker build -t hello-docker
+```
+
+6. Use the `docker image ls` command to check
+
+7. Finally, run the following command:
+
+```
+docker run hello-docker
+```
+
+![image](https://github.com/GHcpv24/CS-634-Data-Mining/assets/106451112/9b21a91d-8e3e-4fde-9ad8-55fa361a98a5)
