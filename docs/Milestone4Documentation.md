@@ -10,51 +10,58 @@ NJIT Summer 2023 <br> CS 634 Data Mining <br> Interpretable Gradient Boosting - 
 
 ---
 
-# Links
+# Project Links
 
 - [Kaggle Housing Prices Prediction Dataset](https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques/overview)
-- [Demo](https://github.com/GHcpv24/CS-634-Data-Mining/blob/milestone-4/README.md)
+- [Demo](link to be added here)
 - [App Landing Page](https://sites.google.com/njit.edu/real-estate-housing/)
 - [HF Streamlit App](https://huggingface.co/spaces/HFcpv24/LightGBM-House-Sale-Price-Prediction)
 - [Documentation](https://github.com/GHcpv24/CS-634-Data-Mining/blob/milestone-4/docs/Milestone4Documentation.md)
-- [Notebook](https://github.com/GHcpv24/CS-634-Data-Mining/blob/milestone-3/CS634_CVega_Milestone3.ipynb)
+- [Notebook](link to be added here)
 
 ---
 
 # Table of Contents
 1. [Abstract](#abstract)
 2. [Introduction](#introduction)
-3. [Installation](#installation)
-4. [Import Libraries and Load Dataset](#import-libraries-and-load-dataset)
-5. [Exploratory Data Analysis](#exploratory-data-analysis)
-6. [Data Preprocessing](#data-preprocessing)
-7. [Baseline](#baseline)
+3. [Getting Started](#getting-started)
 
-   7.1 [Baseline Model Training and Evaluation](#baseline-model-training-and-evaluation)
+   3.1 [Installation](#installation)
+
+   3.2 [Import Libraries and Load Dataset](#import-libraries-and-load-dataset)
+
+4. [Exploratory Data Analysis](#exploratory-data-analysis)
+5. [Data Preprocessing](#data-preprocessing)
+6. [Baseline](#baseline)
+
+   6.1 [Baseline Model Training and Evaluation](#baseline-model-training-and-evaluation)
    
-   7.2 [Baseline SHAP Summary and Interaction Plots](#baseline-shap-summary-and-interaction-plots)
+   6.2 [Baseline SHAP Summary and Interaction Plots](#baseline-shap-summary-and-interaction-plots)
 
-8. [Hyperparameter Optimization via Optuna](#hyperparameter-optimization-via-optuna)
+7. [Hyperparameter Optimization via Optuna](#hyperparameter-optimization-via-optuna)
 
-   8.1 [Tuned Model Training and Evaluation](#tuned-model-training-and-evaluation)
+   7.1 [Tuned Model Training and Evaluation](#tuned-model-training-and-evaluation)
 
-   8.2 [Tuned SHAP Summary and Interaction Plots](#tuned-shap-summary-and-interaction-plots)
+   7.2 [Tuned SHAP Summary and Interaction Plots](#tuned-shap-summary-and-interaction-plots)
 
-9. [HuggingFace Streamlit App](#huggingface-streamlit-app)
+8. [HuggingFace Streamlit App](#huggingface-streamlit-app)
 
-   9.1 [App Results](#app-results)
+   8.1 [App Results](#app-results)
 
-11. [App Landing Page](#app-landing-page)
-12. [Demo](#demo)
-13. [Conclusion](#conclusion)
+9. [App Landing Page](#app-landing-page)
+10. [Demo](#demo)
+11. [Conclusion](#conclusion)
+12. [References](#references)
 
 # Abstract
 
 # Introduction
 
-# Installation
+# Getting Started
 
-# Import Libraries and Load Dataset
+## Installation
+
+## Import Libraries and Load Dataset
 
 # Exploratory Data Analysis
 
@@ -81,3 +88,9 @@ NJIT Summer 2023 <br> CS 634 Data Mining <br> Interpretable Gradient Boosting - 
 # Demo
 
 # Conclusion
+
+# Future Work
+
+# References
+
+The HuggingFace streamlit app created references [this](https://github.com/adhok/streamlit_ames_housing_price_prediction_app) app.
