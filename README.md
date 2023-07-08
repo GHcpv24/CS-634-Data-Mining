@@ -11,10 +11,7 @@ Read the [excellent summary on SHAP that Google engineers have put together](htt
 Perform the SHAP interpretation of the house price prediction model of your choice. At a minimum you should produce graphs that show the SHAP values for the features and the SHAP interaction values for these features.
 
 ---
-
-# House Price Modeling using Regression Techniques for Prediction and SHAP for Explainability/Interpretability 
-
-## Links
+# Links
 
 - [Kaggle Housing Prices Prediction Dataset](https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques/overview)
 - [App Landing Page](https://sites.google.com/njit.edu/real-estate-housing/)
@@ -26,6 +23,8 @@ Perform the SHAP interpretation of the house price prediction model of your choi
 - [Milestone 4 Documentation](https://github.com/GHcpv24/CS-634-Data-Mining/blob/milestone-4/docs/Milestone4Documentation.md)
 
 ---
+
+# House Price Modeling using Regression Techniques for Prediction and SHAP for Explainability/Interpretability 
 
 ## Introduction
 
