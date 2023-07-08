@@ -21,7 +21,7 @@ You need to creating a streamlit app for the house price prediction problem. Str
 
 Submit the github repository URL with a branch titled ‘milestone-3’ with the [README.md]() file containing the link to the deployed HF space where the Milestone 2 calculation and the optimized app calculation price prediction can both be seen.
 
-# House Price Modeling using Regression Techniques for Prediction and SHAP for Explainability/Interpretability 
+# LightGBM Optimization, Predictions, SHAP Interpretations, and HuggingFace Streamlit App Implementation
 
 ## Links
 
