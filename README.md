@@ -1,8 +1,8 @@
 ---
-title: LightGBM Ames Iowa Housing Prices Prediction
-emoji: 🐢
-colorFrom: blue
-colorTo: red
+title: LightGBM House Sale Price Prediction
+emoji: 🏆
+colorFrom: pink
+colorTo: purple
 sdk: streamlit
 sdk_version: 1.21.0
 app_file: app.py
