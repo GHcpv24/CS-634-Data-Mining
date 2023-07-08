@@ -13,6 +13,16 @@ Submit the github repository URL with a branch titled ‘milestone-1’ with the
 
 ---
 
+# Links
+
+- [Milestone 2 Documentation](https://github.com/GHcpv24/CS-634-Data-Mining/blob/milestone-2/docs/Milestone2Documentation.md)
+
+- [Milestone 3 Documentation](https://github.com/GHcpv24/CS-634-Data-Mining/blob/milestone-3/docs/Milestone3Documentation.md)
+
+- [Milestone 4 Documentation](https://github.com/GHcpv24/CS-634-Data-Mining/blob/milestone-4/docs/Milestone4Documentation.md)
+
+---
+
 # Install Docker Desktop for Windows with WSL2 backend
 
 ## References
