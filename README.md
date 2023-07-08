@@ -14,9 +14,10 @@ Perform the SHAP interpretation of the house price prediction model of your choi
 # Links
 
 - [Kaggle Housing Prices Prediction Dataset](https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques/overview)
-- [App Landing Page](https://sites.google.com/njit.edu/real-estate-housing/)
 - [Milestone 2 Documentation](https://github.com/GHcpv24/CS-634-Data-Mining/blob/milestone-2/docs/Milestone2Documentation.md)
 - [Milestone 2 Notebook](https://github.com/GHcpv24/CS-634-Data-Mining/blob/milestone-2/CS634_CVega_Milestone2.ipynb)
+
+---
 
 - [Milestone 1 Documentation](https://github.com/GHcpv24/CS-634-Data-Mining/blob/milestone-1/README.md)
 - [Milestone 3 Documentation](https://github.com/GHcpv24/CS-634-Data-Mining/blob/milestone-3/docs/Milestone3Documentation.md)
