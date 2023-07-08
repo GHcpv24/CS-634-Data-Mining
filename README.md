@@ -14,6 +14,19 @@ Perform the SHAP interpretation of the house price prediction model of your choi
 
 # House Price Modeling using Regression Techniques for Prediction and SHAP for Explainability/Interpretability 
 
+## Links
+
+- [Kaggle Housing Prices Prediction Dataset](https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques/overview)
+- [App Landing Page](https://sites.google.com/njit.edu/real-estate-housing/)
+- [Milestone 2 Documentation](https://github.com/GHcpv24/CS-634-Data-Mining/blob/milestone-2/docs/Milestone2Documentation.md)
+- [Milestone 2 Notebook](https://github.com/GHcpv24/CS-634-Data-Mining/blob/milestone-2/CS634_CVega_Milestone2.ipynb)
+
+- [Milestone 1 Documentation](https://github.com/GHcpv24/CS-634-Data-Mining/blob/milestone-1/README.md)
+- [Milestone 3 Documentation](https://github.com/GHcpv24/CS-634-Data-Mining/blob/milestone-3/docs/Milestone3Documentation.md)
+- [Milestone 4 Documentation](https://github.com/GHcpv24/CS-634-Data-Mining/blob/milestone-4/docs/Milestone4Documentation.md)
+
+---
+
 ## Introduction
 
 The goal of Milestone 2 is to predict house sales price, i.e. `SalePrice`. The dataset consists of over 79 features such as year, location, lot size, and several other housing qualities. Milestone 2 utilizes the LightGBM and XGBoost models for prediction and analyzes feature importance and interactions using SHAP.
@@ -29,14 +42,3 @@ Ensure that you have the necessary dependencies and a compatible environment. To
 ```
 !pip install Kaggle
 ```
-
-## Links
-
-- [Kaggle Housing Prices Prediction Dataset](https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques/overview)
-- [App Landing Page](https://sites.google.com/njit.edu/real-estate-housing/)
-- [Milestone 2 Documentation](https://github.com/GHcpv24/CS-634-Data-Mining/blob/milestone-2/docs/Milestone2Documentation.md)
-- [Milestone 2 Notebook](https://github.com/GHcpv24/CS-634-Data-Mining/blob/milestone-2/CS634_CVega_Milestone2.ipynb)
-
-- [Milestone 1 Documentation](https://github.com/GHcpv24/CS-634-Data-Mining/blob/milestone-1/README.md)
-- [Milestone 3 Documentation](https://github.com/GHcpv24/CS-634-Data-Mining/blob/milestone-3/docs/Milestone3Documentation.md)
-- [Milestone 4 Documentation](https://github.com/GHcpv24/CS-634-Data-Mining/blob/milestone-4/docs/Milestone4Documentation.md)
