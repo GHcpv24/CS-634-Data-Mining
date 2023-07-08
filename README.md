@@ -44,7 +44,7 @@ This can be done by following the below steps:
 3. Press the `Enter` key
 4. Check that your `Version` is indicated as previously stated such as in the below screenshot.
 
-![image](https://github.com/GHcpv24/CS-634-Data-Mining/assets/106451112/4d403101-c546-4be6-b26f-ac0953f11436)
+![Windows Version](/img/winver.png)
 
 ### Install WSL and set to WSL2
 
@@ -60,7 +60,7 @@ Now, ensure that you have WSL version 1.1.3.0 or above. To do this, enter the fo
 wsl --version
 ```
 
-![image](https://github.com/GHcpv24/CS-634-Data-Mining/assets/106451112/1c0c4524-0006-4df2-8daf-36ea33875b49)
+![WSL Version](/img/wslver.png)
 
 If WSL2 is not already set as the default version, configure the default with the following command:
 
@@ -84,17 +84,17 @@ Ensure that you have the latest WSL2 Linux kernel by navigating to the following
 docker version
 ```
 
-![image](https://github.com/GHcpv24/CS-634-Data-Mining/assets/106451112/0acd3a2f-0ce3-4203-ad0d-80600d78b856)
+![Docker Version](/img/dockerver.png)
 
 4. Launch the Docker Desktop application
 5. Go to `Settings`
 6. Under `General`, ensure that `Use the WSL 2 based engine` is selected.
 
-![image](https://github.com/GHcpv24/CS-634-Data-Mining/assets/106451112/acc52529-315b-47bd-bcf5-8ada34296d30)
+![WSL2 Based Engine](/img/wsl2_based_engine.png)
 
 8. Under `Resources`, go to `WSL integration` and ensure that `Enable integration with my default WSL distro` is selected.
 
-![image](https://github.com/GHcpv24/CS-634-Data-Mining/assets/106451112/dd9709a2-939a-4f56-8825-45036d0cb0f3)
+![WSL Integration](/img/enable_integration.png)
 
 <br>
 
@@ -111,7 +111,7 @@ docker run -d -p 80:80 docker/getting-started
 
 3. In Docker Desktop, click on `Containers` to see the "getting started" docker container you created in VS Code
 
-![image](https://github.com/GHcpv24/CS-634-Data-Mining/assets/106451112/3f48b780-2310-42d0-a610-0a0dfe2fef81)
+![Docker Container](/img/container.png)
 
 4. Open a browser and go to `http://localhost/tutorial/`
 
@@ -146,10 +146,8 @@ docker build -t hello-docker
 
 6. Use the `docker image ls` command to check
 
-7. Finally, run the following command:
+7. Finally, run the following command and you should see `Hello World!` as output:
 
 ```
 docker run hello-docker
 ```
-
-![image](https://github.com/GHcpv24/CS-634-Data-Mining/assets/106451112/9b21a91d-8e3e-4fde-9ad8-55fa361a98a5)
