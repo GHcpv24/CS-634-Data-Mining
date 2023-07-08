@@ -23,6 +23,11 @@ Submit the github repository URL with a branch titled ‘milestone-3’ with the
 
 # House Price Modeling using Regression Techniques for Prediction and SHAP for Explainability/Interpretability 
 
+## Links
+
+- [Kaggle Housing Prices Prediction Dataset](https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques/overview)
+- [Milestone 3 Notebook](https://github.com/GHcpv24/CS-634-Data-Mining/blob/milestone-3/CS634_CVega_Milestone3.ipynb)
+
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Installation](#installation)
