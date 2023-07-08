@@ -8,7 +8,7 @@
 
 - [Demo](https://github.com/GHcpv24/CS-634-Data-Mining/blob/milestone-4/README.md)
 
-- [Landing Page](https://sites.google.com/njit.edu/real-estate-housing/)
+- [App Landing Page](https://sites.google.com/njit.edu/real-estate-housing/)
 
 - [HF Streamlit App](https://huggingface.co/spaces/HFcpv24/LightGBM-House-Sale-Price-Prediction)
 
