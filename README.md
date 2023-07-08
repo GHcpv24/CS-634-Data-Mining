@@ -20,7 +20,7 @@ The goal of Milestone 2 is to predict house sales price, i.e. `SalePrice`. The d
 
 ## Installation
 
-Ensure that you have the necessary dependencies and a compatible environment. To run the code, you need to install the required packages. Run the following command to install the necessary packages (if not already installed:
+Ensure that you have the necessary dependencies and a compatible environment. To run the code, you need to install the required packages. Run the following command to install the necessary packages (if not already installed):
 
 ```
 !pip install shap
@@ -29,3 +29,9 @@ Ensure that you have the necessary dependencies and a compatible environment. To
 ```
 !pip install Kaggle
 ```
+
+## Links
+
+- [Kaggle Housing Prices Prediction Dataset](https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques/overview)
+- [Milestone 2 Documentation](https://github.com/GHcpv24/CS-634-Data-Mining/blob/milestone-2/docs/Milestone2Documentation.md)
+- [Milestone 2 Notebook](https://github.com/GHcpv24/CS-634-Data-Mining/blob/milestone-2/CS634_CVega_Milestone2.ipynb)
