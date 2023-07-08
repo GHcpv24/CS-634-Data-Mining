@@ -1,3 +1,14 @@
+---
+title: LightGBM Ames Iowa Housing Prices Prediction
+emoji: 🐢
+colorFrom: blue
+colorTo: red
+sdk: streamlit
+sdk_version: 1.21.0
+app_file: app.py
+pinned: false
+---
+
 # CS-634-Data-Mining
 
 ## Milestone 3: (Week 4, 30 points)
@@ -9,8 +20,6 @@ Repeat the analysis in Milestone 2 but this time use [this](https://towardsdatas
 You need to creating a streamlit app for the house price prediction problem. Streamlit is a python library that allows you to create web apps with minimal coding and deploy them in the cloud. Deploy the streamlit app in [HuggingFace streamlit spaces](https://huggingface.co/docs/hub/spaces-sdks-streamlit) after you create a free account. The app must resemble [this UI](https://adhok-streamlit-ames-housing-price-predict-streamlit-app-lp8hyj.streamlit.app/) (please avoid the shown gif image) and in addition it must show a SHAP summary plot and a SHAP interaction plot.
 
 Submit the github repository URL with a branch titled ‘milestone-3’ with the [README.md]() file containing the link to the deployed HF space where the Milestone 2 calculation and the optimized app calculation price prediction can both be seen.
-
----
 
 # House Price Modeling using Regression Techniques for Prediction and SHAP for Explainability/Interpretability 
 
