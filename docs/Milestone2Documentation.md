@@ -43,7 +43,9 @@ The code performs exploratory data analysis (EDA) to gain insights into the data
 
 - Visualizing the distribution of the target variable (`SalePrice`)
 
-  ![image](https://github.com/GHcpv24/CS-634-Data-Mining/assets/106451112/97e3de3a-b2e1-4a5b-bbc8-67d54c6b52ce)
+  <p align="center">
+  <img src="/docs/img/target-distr.png">
+  </p>
 
 - Looking at general information and descriptive statistics
 - Checking for missing values
@@ -64,13 +66,19 @@ The code trains and evaluates the LightGBM and XGBoost regression models. The st
 - Training the models on the training set
 - Evaluating model performance using cross-validation and metrics
 
-  ![image](https://github.com/GHcpv24/CS-634-Data-Mining/assets/106451112/725be33f-6e94-4041-b4b3-656b5da07dd5)
-
+  <p align="center">
+  <img src="/docs/img/comparison.png">
+  </p>
+  
 - Making predictions on the test dataset `test.csv`
 
-  ![image](https://github.com/GHcpv24/CS-634-Data-Mining/assets/106451112/64d47472-279f-44b0-a414-602035fde586)
+  <p align="center">
+  <img src="/docs/img/lgbmr-pred.png">
+  </p>
 
-  ![image](https://github.com/GHcpv24/CS-634-Data-Mining/assets/106451112/09f0de87-e561-4f2c-9273-bf26cc93d9b9)
+  <p align="center">
+  <img src="/docs/img/xgbr-pred.png">
+  </p>
 
 ## Feature Importance and Interaction Analysis using SHAP
 
@@ -78,37 +86,61 @@ Feature importance analysis is performed using the SHAP (SHapley Additive exPlan
 
 - Bar Plots
 
-  ![image](https://github.com/GHcpv24/CS-634-Data-Mining/assets/106451112/f98e3f07-6c57-4e33-a5d9-94b8b02f0f85)
+  <p align="center">
+  <img src="/docs/img/bar1.png">
+  </p>
 
-  ![image](https://github.com/GHcpv24/CS-634-Data-Mining/assets/106451112/7a7732df-55d9-4c43-b6a1-abf1e141686e)
+  <p align="center">
+  <img src="/docs/img/bar2.png">
+  </p>
 
 - Beeswarm Plots
 
-  ![image](https://github.com/GHcpv24/CS-634-Data-Mining/assets/106451112/a5305971-2c68-4297-8f4d-72aedc0ab092)
+  <p align="center">
+  <img src="/docs/img/beeswarm1.png">
+  </p>
 
-  ![image](https://github.com/GHcpv24/CS-634-Data-Mining/assets/106451112/9d997a40-8e94-4861-aa09-cd55a4b48a8f)
+  <p align="center">
+  <img src="/docs/img/beeswarm2.png">
+  </p>
 
 - Waterfall Plots
 
-  ![image](https://github.com/GHcpv24/CS-634-Data-Mining/assets/106451112/370f7520-938c-49c8-b1cf-cb926138ccc0)
+  <p align="center">
+  <img src="/docs/img/waterfall.png">
+  </p>
 
 - Force Plots
 
-  ![image](https://github.com/GHcpv24/CS-634-Data-Mining/assets/106451112/c6cbc85c-92f4-4736-9747-76a13cc81df2)
+  <p align="center">
+  <img src="/docs/img/lgbmr-force.png">
+  </p>
 
-  ![image](https://github.com/GHcpv24/CS-634-Data-Mining/assets/106451112/961aa642-f474-4008-bbbe-7c3cf9a93ac8)
+  <p align="center">
+  <img src="/docs/img/xgbr-force.png">
+  </p>
 
  - SHAP Interactions
 
-   ![image](https://github.com/GHcpv24/CS-634-Data-Mining/assets/106451112/858ef995-6dde-4ae2-84da-aa5bfb1e7f05)
+  <p align="center">
+  <img src="/docs/img/lgbmr-depend1.png">
+  </p>
 
-   ![image](https://github.com/GHcpv24/CS-634-Data-Mining/assets/106451112/25b4d333-ee5b-4f61-847d-b450edd1f077)
+  <p align="center">
+  <img src="/docs/img/lgbmr-depend2.png">
+  </p>
 
-   ![image](https://github.com/GHcpv24/CS-634-Data-Mining/assets/106451112/27cac91a-e6e2-4cc0-b350-1aaf46e5b859)
+  <p align="center">
+  <img src="/docs/img/xgbr-depend1.png">
+  </p>
 
-   ![image](https://github.com/GHcpv24/CS-634-Data-Mining/assets/106451112/9c2f3863-dcab-4f7f-964d-bce68c85d6ec)
+  <p align="center">
+  <img src="/docs/img/xgbr-depend2.png">
+  </p>
 
-   ![image](https://github.com/GHcpv24/CS-634-Data-Mining/assets/106451112/1f334d93-efb8-4701-967f-7af3ad9db8f0)
+  <p align="center">
+  <img src="/docs/img/interaction.png">
+  </p>
 
 ## Conclusion
 
