@@ -4,6 +4,11 @@
 
 # House Price Modeling using Regression Techniques for Prediction and SHAP for Explainability/Interpretability 
 
+## Links
+
+- [Kaggle Housing Prices Prediction Dataset](https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques/overview)
+- [Milestone 2 Notebook](https://github.com/GHcpv24/CS-634-Data-Mining/blob/milestone-2/CS634_CVega_Milestone2.ipynb)
+
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Installation](#installation)
