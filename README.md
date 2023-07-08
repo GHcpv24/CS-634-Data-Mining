@@ -1,5 +1,23 @@
 # CS 634 Data Mining Project
 
+---
+
+## Links
+
+- [Kaggle Dataset](https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques/overview)
+
+- [Demo](https://github.com/GHcpv24/CS-634-Data-Mining/blob/milestone-4/README.md)
+
+- [Landing Page](https://sites.google.com/njit.edu/real-estate-housing/)
+
+- [HF Streamlit App](https://huggingface.co/spaces/HFcpv24/LightGBM-House-Sale-Price-Prediction)
+
+- [Documentation](https://github.com/GHcpv24/CS-634-Data-Mining/blob/milestone-4/docs/Milestone4Documentation.md)
+
+- [Notebook](https://github.com/GHcpv24/CS-634-Data-Mining/blob/milestone-3/CS634_CVega_Milestone3.ipynb)
+
+---
+
 ## Interpretable Gradient Boosting - Real Estate House Price Prediction
 
 Ask a home buyer to describe their dream house, and they probably won’t begin with the height of the basement ceiling or the proximity to an east-west railroad. But this playground competition’s dataset proves that much more influences price negotiations than the number of bedrooms or a white-picket fence. With 79 explanatory variables describing (almost) every aspect of residential homes in Ames, Iowa, this competition challenges you to predict the final price of each home.
