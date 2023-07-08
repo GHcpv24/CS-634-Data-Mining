@@ -75,7 +75,9 @@ The code performs exploratory data analysis (EDA) to gain insights into the data
 
 - Visualizing the distribution of the target variable (`SalePrice`)
 
-  ![image](https://github.com/GHcpv24/CS-634-Data-Mining/assets/106451112/9bd3353f-2b23-4182-b000-53a0599fe47d)
+  <p align="center">
+  <img src="/docs/img/target-distr.png">
+  </p>
 
 - Looking at general information and descriptive statistics
 - Checking for missing values
@@ -95,40 +97,58 @@ The code trains and evaluates the LightGBM and XGBoost regression models. The st
 - Training the models on the training set
 - Evaluating model performance using cross-validation and metrics
 
-  ![image](https://github.com/GHcpv24/CS-634-Data-Mining/assets/106451112/fca7687f-60bd-460f-b6c8-73dea2fc80d3)
-
+  <p align="center">
+  <img src="/docs/img/baseline-eval.png">
+  </p>
+  
 - Making predictions on the test dataset `test.csv`
 
-  ![image](https://github.com/GHcpv24/CS-634-Data-Mining/assets/106451112/f88c5d86-7dda-4fef-915a-828a2ce90337)
-
+  <p align="center">
+  <img src="/docs/img/baseline-pred.png">
+  </p>
+  
 ## Feature Importance and Interaction Analysis using SHAP
 
 Feature importance analysis is performed using the SHAP (SHapley Additive exPlanations) library. The code calculates SHAP values and interaction values for the models and visualizes feature importance using SHAP plots.
 
-- Bar Plots
+- Bar Plot
 
-  ![image](https://github.com/GHcpv24/CS-634-Data-Mining/assets/106451112/f3be8c91-52f1-46ac-aa30-44621bf7d380)
+  <p align="center">
+  <img src="/docs/img/bar1.png">
+  </p>
+  
+- Beeswarm Plot
 
-- Beeswarm Plots
+  <p align="center">
+  <img src="/docs/img/beeswarm1.png">
+  </p>
+  
+- Waterfall Plot
 
-  ![image](https://github.com/GHcpv24/CS-634-Data-Mining/assets/106451112/31e0d411-6ebe-44fe-8913-31c2c56c0bd7)
+  <p align="center">
+  <img src="/docs/img/waterfall1.png">
+  </p>
+  
+- Force Plot
 
-- Waterfall Plots
-
-  ![image](https://github.com/GHcpv24/CS-634-Data-Mining/assets/106451112/a5e33883-61db-4789-8b0a-cd0f1e8ab974)
-
-- Force Plots
-
-  ![image](https://github.com/GHcpv24/CS-634-Data-Mining/assets/106451112/df0b62b2-16d8-4e22-9e6d-dba0ad3c5886)
-
+  <p align="center">
+  <img src="/docs/img/force1.png">
+  </p>
+  
  - SHAP Interactions
 
-   ![image](https://github.com/GHcpv24/CS-634-Data-Mining/assets/106451112/147add8d-2706-4007-aace-1611dd915fa7)
-
-   ![image](https://github.com/GHcpv24/CS-634-Data-Mining/assets/106451112/9dbd3904-9bf9-4643-ac8a-f5159c48a6ee)
-
-   ![image](https://github.com/GHcpv24/CS-634-Data-Mining/assets/106451112/f65ddf9a-d2f4-4fa5-b5d5-8390703cac7e)
-
+  <p align="center">
+  <img src="/docs/img/depend1-1.png">
+  </p>
+  
+  <p align="center">
+  <img src="/docs/img/depend1-2.png">
+  </p>
+  
+  <p align="center">
+  <img src="/docs/img/interact1.png">
+  </p>
+  
 ## Hyperparameter Optimization via Optuna
 
 Perform tuning on the following hyperparameters:
@@ -149,62 +169,98 @@ params_lgbm = {
 
 - Evaluation
 
-  ![image](https://github.com/GHcpv24/CS-634-Data-Mining/assets/106451112/50d3e47a-820f-49b6-9792-62c2e62a1152)
-
+  <p align="center">
+  <img src="/docs/img/tuned-eval.png">
+  </p>
+  
 - Prediction
 
-  ![image](https://github.com/GHcpv24/CS-634-Data-Mining/assets/106451112/11472cda-9f92-4bf9-b48f-d909d30398d5)
-
+  <p align="center">
+  <img src="/docs/img/tuned-pred.png">
+  </p>
+  
 ## SHAP for Optimized LightGBM Model
 
-- Bar Plots
+- Bar Plot
 
-  ![image](https://github.com/GHcpv24/CS-634-Data-Mining/assets/106451112/bf151256-3dca-4fa6-83ce-79dc66213059)
+  <p align="center">
+  <img src="/docs/img/bar2.png">
+  </p>
+  
+- Beeswarm Plot
 
-- Beeswarm Plots
+  <p align="center">
+  <img src="/docs/img/beeswarm2.png">
+  </p>
+  
+- Waterfall Plot
 
-  ![image](https://github.com/GHcpv24/CS-634-Data-Mining/assets/106451112/11fc1529-8750-4ff5-9457-4f7e2d9a3bbc)
+  <p align="center">
+  <img src="/docs/img/waterfall2.png">
+  </p>
+  
+- Force Plot
 
-- Waterfall Plots
-
-  ![image](https://github.com/GHcpv24/CS-634-Data-Mining/assets/106451112/0c729fc1-6efc-4a6a-a8ac-972a2d7b0e4b)
-
-- Force Plots
-
-  ![image](https://github.com/GHcpv24/CS-634-Data-Mining/assets/106451112/6ae920fc-b137-47fb-ada5-7f4d47900be1)
-
+  <p align="center">
+  <img src="/docs/img/force2.png">
+  </p>
+  
  - SHAP Interactions
 
-   ![image](https://github.com/GHcpv24/CS-634-Data-Mining/assets/106451112/dd298bdf-1547-4a44-baa3-3fb54c3207b0)
-
-   ![image](https://github.com/GHcpv24/CS-634-Data-Mining/assets/106451112/ad426f3c-0c63-41e8-bbcd-b33ad1c7502e)
-
-   ![image](https://github.com/GHcpv24/CS-634-Data-Mining/assets/106451112/f214d3fb-0c3a-4804-be59-ecb429dc8718)
-
+  <p align="center">
+  <img src="/docs/img/depend2-1.png">
+  </p>
+  
+  <p align="center">
+  <img src="/docs/img/depend2-2.png">
+  </p>
+  
+  <p align="center">
+  <img src="/docs/img/interact2.png">
+  </p>
+  
 ## Prepare for HuggingFace Streamlit App
 
 Use `pickle` library to save trained baseline and trained optimized models
 
-## HuggingFace Streamlit App Results
+## HF LightGBM House Sale Price Prediction Streamlit App
 
-Example of results from using my LightGBM House Sale Price PRediction streamlit app on HuggingFace.
+The HuggingFace `LightGBM-House-Sale-Price-Prediction` streamlit app provides an interactive and user-friendly interface with sliders allowing the user to select various housing details (i.e. year, # of beds, etc.). Once the user has made their selections, a button can be clicked to generate the LightGBM baseline and LightGBM tuned models' predictions for the house sales price based on the chosen slider parameters.
 
-![image](https://github.com/GHcpv24/CS-634-Data-Mining/assets/106451112/7bf0ef04-6ce0-4f6e-9cf8-b81ed0981497)
+### App Preview:
 
-![image](https://github.com/GHcpv24/CS-634-Data-Mining/assets/106451112/78ff9f26-ed95-4cbc-95fc-8d84d23ec55e)
+  <p align="center">
+  <img src="/docs/img/app_preview.png">
+  </p>
 
-![image](https://github.com/GHcpv24/CS-634-Data-Mining/assets/106451112/bb2fd050-21f2-42d3-8df6-e3be2053640c)
+### App Example Results
 
-![image](https://github.com/GHcpv24/CS-634-Data-Mining/assets/106451112/f5b9589e-1ac8-496e-bab4-913e2cc7368b)
+- Baseline LightGBM Predictions
+  <p align="center">
+  <img src="/docs/img/app_base1.png">
+  </p>
+  
+  <p align="center">
+  <img src="/docs/img/app_base2.png">
+  </p>
+  
+  <p align="center">
+  <img src="/docs/img/app_base3.png">
+  </p>
 
-![image](https://github.com/GHcpv24/CS-634-Data-Mining/assets/106451112/90de9633-5469-4601-86a3-3c1f6351ab4d)
-
-![image](https://github.com/GHcpv24/CS-634-Data-Mining/assets/106451112/d5f299cd-7c87-4f0b-81aa-e521364ca6da)
-
-![image](https://github.com/GHcpv24/CS-634-Data-Mining/assets/106451112/4ceb4d16-cd4f-442c-9dc9-97224a57f219)
-
-![image](https://github.com/GHcpv24/CS-634-Data-Mining/assets/106451112/dc23b262-eb85-4fff-8017-b0a3ea514acf)
-
+- Tuned LightGBM Predictions
+  <p align="center">
+  <img src="/docs/img/app_tuned1.png">
+  </p>
+  
+  <p align="center">
+  <img src="/docs/img/app_tuned2.png">
+  </p>
+  
+  <p align="center">
+  <img src="/docs/img/app_tuned3.png">
+  </p>
+  
 ## Conclusion
 
 In conclusion, this code demonstrates the process of Milestone 3's house `SalePrice` price prediction. The LightGBM models had shown more improvements as indicated by a better cross-validation, $R^2$ and RMSE scores. SHAP plots again provide valuable insights into the significance of different features. Feel free to explore the code and experiment with different models and techniques to further improve the predictions.
