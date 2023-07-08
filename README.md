@@ -38,7 +38,7 @@ Submit the github repository URL with a branch titled ‘milestone-3’ with the
 
 ---
 
-# House Price Modeling using Regression Techniques for Prediction and SHAP for Explainability/Interpretability 
+# LightGBM Optimization, Predictions, SHAP Interpretations, and HuggingFace Streamlit App Implementation 
 
 ## Introduction
 
