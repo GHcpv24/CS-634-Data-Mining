@@ -52,14 +52,14 @@ The HuggingFace Streamlit App can be found [here](https://huggingface.co/spaces/
 
 Ensure that you have the necessary dependencies and a compatible environment. To run the code, you need to install the required packages. Run the following command to install the necessary packages (if not already installed):
 
-```
+```py
 !pip install shap
 ```
 
-```
+```py
 !pip install Kaggle
 ```
 
-```
+```py
 !pip install optuna
 ```
