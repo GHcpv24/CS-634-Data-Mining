@@ -50,7 +50,7 @@ The HuggingFace Streamlit App can be found [here](https://huggingface.co/spaces/
 
 ## Installation
 
-Ensure that you have the necessary dependencies and a compatible environment. To run the code, you need to install the required packages. Run the following command to install the necessary packages (if not already installed:
+Ensure that you have the necessary dependencies and a compatible environment. To run the code, you need to install the required packages. Run the following command to install the necessary packages (if not already installed):
 
 ```
 !pip install shap
