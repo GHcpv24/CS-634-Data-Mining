@@ -13,11 +13,10 @@ NJIT Summer 2023 <br> CS 634 Data Mining <br> Interpretable Gradient Boosting - 
 # Project Links
 
 - [Kaggle Housing Prices Prediction Dataset](https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques/overview)
-- [Demo](link to be added here)
+- [Demo](https://github.com/GHcpv24/CS-634-Data-Mining/blob/milestone-4/README.md)
 - [App Landing Page](https://sites.google.com/njit.edu/real-estate-housing/)
 - [HF Streamlit App](https://huggingface.co/spaces/HFcpv24/LightGBM-House-Sale-Price-Prediction)
-- [Documentation](https://github.com/GHcpv24/CS-634-Data-Mining/blob/milestone-4/docs/Milestone4Documentation.md)
-- [Notebook](link to be added here)
+- [Notebook](https://github.com/GHcpv24/CS-634-Data-Mining/blob/milestone-4/CS634_CVega_Notebook.ipynb)
 
 ---
 
