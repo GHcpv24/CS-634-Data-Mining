@@ -63,3 +63,16 @@ Ensure that you have the necessary dependencies and a compatible environment. To
 ```py
 !pip install optuna
 ```
+
+# Necessary Dependencies for the HuggingFace Streamlit App
+
+If you have been following the code in this project, ensure you have included in the `requirements.txt` file the following dependencies:
+
+```py
+streamlit
+pandas
+numpy
+matplotlib
+lightgbm
+shap
+```
