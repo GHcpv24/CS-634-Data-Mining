@@ -46,7 +46,7 @@ NJIT Summer 2023 <br> CS 634 Data Mining <br> Interpretable Gradient Boosting - 
 
    5.1 [Skewed Distribution](#skewed-distribution)
 
-   5.2 [Handling Missing Values](#handling-missing-values)
+   5.2 [Missing Values and Categorical Features](#missing-values-and-categorical-features)
 
 6. [Baseline](#baseline)
 
@@ -345,7 +345,7 @@ Firstly, the distribution of `SalePrice` was plotted and its shape appeared to b
 
 ## Descriptive Statistics
 
-Then descriptive statistics were displayed in order to reveal information on central tendency and spread of the numerical features. 
+Then, descriptive statistics were displayed in order to reveal information on central tendency and spread of the numerical features. 
 
 ## Identifying Missing Values
 
@@ -355,13 +355,41 @@ Most importantly, measures were taken to detect missing values in the dataset. T
 <img src="/docs/img/nullval.png">
 </p>
 
+By identifying the missing values, appropriate strategies can be devised to handle them. This will be discussed in the next section.
+
 # Data Preprocessing
+
+<p align="justify">
+This next step is essential for ensuring data is cleaned, formatted, and structured in a way that facilitates the analysis process. Involved in this data preprocessing are handling missing values, encoding categorical features, and, if necessary, handling the distribution of the target variable `SalePrice`.
+</p>
 
 ## Skewed Distribution
 
-## Handling Missing Values
+<p align="justify">
+In general, a skewed distribution could greatly affect the model due to variability. Therefore, methods such as logarithmic transformations are applied to have the distributions approach a Normal distribution. Although LightGBM and XGBoost can handle skewed distributions quite well, in the case of <code>milestone-2</code>, logarithmic transformation on <code>SalePrice</code> was implemented in an attempt to discover possibilities of a noticeable difference in performance from the reduction of variability. Below you will find the new plot of `SalePrice` and will see how the distribution approaches a Normal distribution.
+</p>
+
+<p align="center">
+<img src="/docs/img/target-log.png">
+</p>
+
+<p align="justify">
+For <code>milestone-3</code>, however, there was no logarithmic transformation done for the target variable <code>SalePrice</code>. Details behind the reasoning will be provided in the section containing model evaluations.
+</p>
+
+## Missing Values and Categorial Features
+
+<p align="justify">
+Missing values aren't handled only because most algorithms do not support missing values, but also because missings values can introduce a loss of power. Strategies must be put into place for handling missing values appropriately. One such strategy that is used in this project is mean imputation, that is, for the numerical features. For categorical features (or features that contain non-numeric values), the text "missing" replaced the missing values.
+</p>
+
+<p align="justify">
+Continuing on the topic of categorical features, it is necessary to encode them in order to convert them into respective numerical representations, most especially when an algorithm will be requiring numerical input. <code>LabelEncoder</code> was used to handle the encoding of the categorical features.
+</p>
 
 # Baseline
+
+
 
 ## Baseline Model Training and Evaluation
 
