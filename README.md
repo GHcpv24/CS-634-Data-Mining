@@ -1,4 +1,4 @@
-# CS-634-Data-Mining
+# CS634-Data-Mining
 
 Summer 2023 NJIT
 
