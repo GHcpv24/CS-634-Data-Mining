@@ -56,15 +56,15 @@ The HuggingFace Streamlit App can be found [here](https://huggingface.co/spaces/
 
 Ensure that you have the necessary dependencies and a compatible environment. To run the code, you need to install the required packages. Run the following command to install the necessary packages (if not already installed:
 
-```
+```py
 !pip install shap
 ```
 
-```
+```py
 !pip install Kaggle
 ```
 
-```
+```py
 !pip install optuna
 ```
 
@@ -159,7 +159,7 @@ Feature importance analysis is performed using the SHAP (SHapley Additive exPlan
 
 Perform tuning on the following hyperparameters:
 
-```
+```py
 params_lgbm = {
         'n_estimators': trial.suggest_int('n_estimators', 100, 1000),
         'learning_rate': trial.suggest_float('learning_rate', 0.01, 0.1),
