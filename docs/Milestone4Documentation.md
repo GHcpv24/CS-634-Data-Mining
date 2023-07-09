@@ -54,11 +54,35 @@ NJIT Summer 2023 <br> CS 634 Data Mining <br> Interpretable Gradient Boosting - 
 
 # Abstract
 
+<p align="justify">
+Provided within this documentation are extensive accounts of my methodology, findings, and insightss. The Interpretable Gradient Boosting - Real Estate House Price Prediction Project leveraged machine learning techniques to develop a predictive model and interpretable framework that can accurately predict housing sales prices based on various Ames, Iowa housing features (79 to be exact) such as year built, area square footage, number of bedrooms, etc. In <code>`milestone-1`</code>, the task was to get familiar with <code>`Docker`</code>. The machine learning model and SHapley Additive exPlanations (SHAP) plots were built in <code>`milestone-2`</code>, whereas <code>`milestone-3`</code> built upon the previous milestone by performing hyperparamter optimization with Optuna and added the creating of the HuggingFace streamlit app. For the final milestone, <code>`milestone-4`</code>, the task was to finalize the project by means of extensive documentation, creating a Google Sites landing page for the streamlit app, and producing a demo video of the app.
+</p>
+
 # Introduction
+
+<p align="justify">
+Due to the sheer variety and number of factors that affect house pricing, determining the sale price of a house if often challenging - a problem faced by realtors, homeowners, and buyers alike. The <a href"https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques/overview">Kaggle Housing Prices Prediction Dataset</a> featuring data on Ames, Iowa homes, originally prepared by Dean De Cock, comprises 4 files: <code>`data_description.txt`</code>, <code>`sample_submission.csv`</code>, <code>`train.csv`</code>, and <code>`test.csv`</code>. Contained within the dataset are 79 explanatory variables and a little over 2.9k observations. The project aims to build a machine learning model that, based on the dataset, can predict the sale price of a house - being aware that machine learning can offer promising solutions to tackle the prediction challenge and task at hand. The models utilized in this project are LightGBM and XGBoost, whereas SHAP plots are used for interpretable (or explainable) machine learning. Optimization will be explored as well as the development of the HuggingFace streamlit app which provides an interface for users to experiment with the trained models. Prior to taking on these steps, however, are the Exploratory Data Analysis (EDA) and data preprocessing steps, which will be discussed shortly.
+</p>
 
 # Getting Started
 
 ## Installation
+
+<p align="justify">
+Ensure that you have the necessary dependencies and a compatible environment. To run the code, you need to install the required packages. Run the following command to install the necessary packages (if not already installed:
+</p>
+
+```
+!pip install shap
+```
+
+```
+!pip install Kaggle
+```
+
+```
+!pip install optuna
+```
 
 ## Import Libraries and Load Dataset
 
