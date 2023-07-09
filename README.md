@@ -39,7 +39,7 @@ The aim of Milestone 4 is to finalize the project by focusing on documentation, 
 
 # Installation
 
-Ensure that you have the necessary dependencies and a compatible environment. To run the code, you need to install the required packages. Run the following command to install the necessary packages (if not already installed:
+Ensure that you have the necessary dependencies and a compatible environment. To run the code, you need to install the required packages. Run the following command to install the necessary packages (if not already installed):
 
 ```
 !pip install shap
