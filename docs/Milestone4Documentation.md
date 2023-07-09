@@ -76,7 +76,7 @@ NJIT Summer 2023 <br> CS 634 Data Mining <br><br> Interpretable Gradient Boostin
 # Abstract
 
 <p align="justify">
-Provided within this documentation are extensive accounts of my methodology, findings, and insightss. The Interpretable Gradient Boosting - Real Estate House Price Prediction Project leveraged machine learning techniques to develop a predictive model and interpretable framework that can accurately predict housing sales prices (target variable: <code>SalePrice</code> based on various Ames, Iowa housing features (79 to be exact) such as year built, area square footage, number of bedrooms, etc. In <code>milestone-1</code>, the task was to get familiar with <code>Docker</code>. The machine learning models XGBoost$^1$ and LightGBM$^2$ were built in <code>milestone-2</code> as baseline models along with creating SHapley Additive exPlanations$^3$ plots, whereas <code>milestone-3</code> built upon the previous milestone by performing hyperparamter optimization with Optuna$^4$ and added the creating of the HuggingFace streamlit app$^5$. For the final milestone, <code>milestone-4</code>, the task was to finalize the project by means of extensive documentation, creating a Google Sites landing page for the streamlit app, and producing a demo video of the app.
+Provided within this documentation are extensive accounts of my methodology, findings, and insightss. The Interpretable Gradient Boosting - Real Estate House Price Prediction Project leveraged machine learning techniques to develop a predictive model and interpretable framework that can accurately predict housing sales prices (target variable: <code>SalePrice</code> based on various Ames, Iowa housing features (79 to be exact) such as year built, area square footage, number of bedrooms, etc. In <code>milestone-1</code>, the task was to get familiar with <code>Docker</code>. The machine learning models XGBoost $^1$ and LightGBM $^2$ were built in <code>milestone-2</code> as baseline models along with creating SHapley Additive exPlanations $^3$ plots, whereas <code>milestone-3</code> built upon the previous milestone by performing hyperparamter optimization with Optuna $^4$ and added the creating of the HuggingFace streamlit app $^5$. For the final milestone, <code>milestone-4</code>, the task was to finalize the project by means of extensive documentation, creating a Google Sites landing page for the streamlit app, and producing a demo video of the app.
 </p>
 
 # Introduction
@@ -88,7 +88,7 @@ Due to the sheer variety and number of factors that affect house pricing, determ
 
 ## Dataset
 
-The [Kaggle Housing Prices Prediction Dataset](https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques/overview)$^6$ featuring data on Ames, Iowa homes, originally prepared by Dean De Cock, comprises 4 files: 
+The [Kaggle Housing Prices Prediction Dataset](https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques/overview) $^6$ featuring data on Ames, Iowa homes, originally prepared by Dean De Cock, comprises 4 files: 
 
 >train.csv - the training set
 >
@@ -643,7 +643,7 @@ https://github.com/GHcpv24/CS634-Data-Mining/assets/106451112/39573996-deeb-4086
 
 [2] LightGBM, LightGBM Documentation, https://lightgbm.readthedocs.io/en/stable/
 
-[3] SHAP, SHAP Documentation, [https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques/overview](https://shap.readthedocs.io/en/latest/)
+[3] SHAP, SHAP Documentation, https://shap.readthedocs.io/en/latest/
 
 [4] Optuna, Optuna Documentation, https://optuna.readthedocs.io/en/stable/
 
@@ -651,5 +651,4 @@ https://github.com/GHcpv24/CS634-Data-Mining/assets/106451112/39573996-deeb-4086
 
 [6] Kaggle, House Prices - Advanced Regression Techniques, https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques/overview
 
-[7] Github user adhok, streamlit_ames_housing_price_prediction_app
- by Pradeep Adhokshaja, https://github.com/adhok/streamlit_ames_housing_price_prediction_app
+[7] Github user adhok, streamlit_ames_housing_price_prediction_app by Pradeep Adhokshaja, https://github.com/adhok/streamlit_ames_housing_price_prediction_app
