@@ -4,9 +4,11 @@
 <img src="/docs/img/njitlogo.png">
 </p>
 
+<h3>
 <p align="center">
-NJIT Summer 2023 <br> CS 634 Data Mining <br> Interpretable Gradient Boosting - Real Estate House Price Prediction Project <br> By: Chiara Vega
+NJIT Summer 2023 <br> CS 634 Data Mining <br><br> Interpretable Gradient Boosting - Real Estate House Price Prediction Project <br> By: Chiara Vega
 </p>
+</h3>
 
 ---
 
@@ -524,9 +526,100 @@ The core explainer API that this project uses is <code>TreeExplainer</code>, sin
 
 # Hyperparameter Optimization via Optuna
 
+<p align="justify">
+The results for the baseline model appeared relatively decent. However, this project will check to see whether the model can be enhanced by means of tuning the hyperparameters with Optuna, a potent framework for hyperparameter optimization. Optuna offers an the automated and efficient approach in searching for the best combination of hyperparameters, specifically making use of the Tree-structured Parzen Estimator (a Bayesian optimization algorithm). The best hyperparameters found with Optuna, given a specific hyperparameter space, are then used to train the new LightGBM model, or more specifically <code>LGBMRegressor</code>.
+</p>
+
+<p align="justify">
+Note: As understood by the <code>milestone-3</code> requirements, only LightGBM should be implemented from this milestone onwards. However, due to curiousity, the intial attempt to complete <code>milestone-3</code> including optimizing XGBoost along with LightGBM. Interestingly enough, it was found that after evaluating the comparisons of $CV$, $R^2$, and $RMSE$ scores for both models, XGBoost, or more specifically <code>XGBRegressor</code>, had performed better than <code>LGBMRegresor</code>, where the LightGBM had initially performed better than XGBoost as baseline models. Another way to put it is that prior to tuning, the LightGBM model performed better, but after tuning XGBoost had shown better results in overall scores.
+</p>
+
 ## Tuned Model Training, Evaluation, and Predictions
 
+The `objective` function for Optuna with regards to LightGBM was defined as follows:
+
+```py
+    params_lgbm = {
+        'n_estimators': trial.suggest_int('n_estimators', 100, 1000),
+        'learning_rate': trial.suggest_float('learning_rate', 0.01, 0.1),
+        'max_depth': trial.suggest_int('max_depth', 3, 10),
+        'num_leaves': trial.suggest_int('num_leaves', 10, 100),
+        'min_child_samples': trial.suggest_int('min_child_samples', 1, 20),
+        'subsample': trial.suggest_float('subsample', 0.5, 1.0),
+        'colsample_bytree': trial.suggest_float('colsample_bytree', 0.5, 1.0),
+    }
+```
+
+<p align="justify">
+After Optuna finds the best hyperparameter combination given the above hyperparameter space, this combination is used for training the new LightGBM model. In the most recent case, the best hyperparameter combination found for <code>LGBMRegressor</code> were:
+</p>
+
+```
+Best Hyperparameters for LGBMRrgressor:
+ {'n_estimators': 682, 'learning_rate': 0.02604550764322017, 'max_depth': 3, 'num_leaves': 14, 'min_child_samples': 2, 'subsample': 0.9550193851297658, 'colsample_bytree': 0.6451459068553724}
+```
+
+<p align="justify">
+It can be seen from the below image that the tuned LightGBM model performed better overall compared to the baseline LightGBM model. LightGBM optimized with Optuna resulted in a higher $CV$ score, a higher $R^2$ score, and a lower $RMSE$ score.
+</p>
+
+<p align="center">
+<img src="/docs/img/tuned-eval.png">
+</p>
+
+The optimized LightGBM model's predictions were as follows:
+
+<p align="center">
+<img src="/docs/img/tuned-pred.png">
+</p>
+
 ## Tuned SHAP Summary and Interaction Plots
+
+<p align="justify">
+As stated previously under the Baseline section of the documentation, looking at `Id` and `SalePrice` alone for the model's predictions will not provide sufficient information for understanding the underlying factors that impacted (or influenced) the resulting prediction on house sale price. This is where SHAP, once again, plays a role in model interpretability (or explainability). Below you will find the same types of plots displayed as done for the baseline LightGBM model.
+</p>
+
+<p align="justify">
+There were changes in the ranking of feature importance where, taking the top 5 as an example, the feature <code>GarageCars</code> which was in 5th position shown on the bar plot of the baseline model is now replaced by feature <code>GarageType</code> for 5th most influential feature. Additionally, by viewing the beeswarm plot, you will find that again, as mentioned previously about the beeswarm plot of the XGBoost model, a lower <code>GarageType</code> value leads to higher house sales price prediction.
+</p>
+
+- Bar plot
+  
+<p align="center">
+<img src="/docs/img/bar2.png">
+</p>
+
+- Beeswarm plot
+  
+<p align="center">
+<img src="/docs/img/beeswarm2.png">
+</p>
+
+- Waterfall plot
+  
+<p align="center">
+<img src="/docs/img/waterfall2.png">
+</p>
+
+- Force plot
+  
+<p align="center">
+<img src="/docs/img/force2.png">
+</p>
+
+- SHAP interaction plots
+
+<p align="center">
+<img src="/docs/img/depend2-1.png">
+</p>
+
+<p align="center">
+<img src="/docs/img/depend2-2.png">
+</p>
+
+<p align="center">
+<img src="/docs/img/interact2.png">
+</p>
 
 # HuggingFace Streamlit App
 
