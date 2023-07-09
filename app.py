@@ -18,7 +18,7 @@ st.markdown("<body style ='color:#00D9DC;'></body>", unsafe_allow_html=True)
 
 st.markdown("<h1 style='text-align: center; color: #00D9DC;'>Welcome to Chiara's HuggingFace Streamlit App!</h1>", unsafe_allow_html=True)
 
-st.markdown("<h3 style='text-align: center; color: #00D9DC;'>This is an app that generates house sale price predictions using LightGBM. The dataset can be found <a href='https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques'>here</a> and the notebook can be found <a href='https://github.com/GHcpv24/CS-634-Data-Mining/tree/milestone-3'>here</a>.</h3>", unsafe_allow_html=True)
+st.markdown("<h3 style='text-align: center; color: #00D9DC;'>This is an app that generates house sale price predictions using LightGBM. The dataset can be found <a href='https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques'>here</a> and the notebook can be found <a href='https://github.com/GHcpv24/CS-634-Data-Mining/blob/milestone-4/CS634_CVega_Notebook.ipynb'>here</a>.</h3>", unsafe_allow_html=True)
 
 st.markdown("<h5 style='text-align: center; color: #00D9DC;'>Instructions:</h5>", unsafe_allow_html=True)
 
