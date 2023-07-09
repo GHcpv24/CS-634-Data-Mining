@@ -227,7 +227,9 @@ params_lgbm = {
   
 ## Prepare for HuggingFace Streamlit App
 
-Use `pickle` library to save trained baseline and trained optimized models
+Use `pickle` library to save trained baseline and trained optimized models.
+
+Prepare the `requirements.txt` and `app.py` files for your HF Streamlit App.
 
 ## HF LightGBM House Sale Price Prediction Streamlit App
 
