@@ -110,9 +110,9 @@ Ensure that you have the necessary dependencies and a compatible environment. To
 
 # Demo
 
-# Conclusion
+https://github.com/GHcpv24/CS634-Data-Mining/assets/106451112/39573996-deeb-4086-9a8b-6cf33b9397d9
 
-# Future Work
+# Conclusion
 
 # References
 
