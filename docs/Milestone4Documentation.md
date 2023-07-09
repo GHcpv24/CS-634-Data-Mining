@@ -402,10 +402,10 @@ Both XGBoost and LightGBM models were utilized in `milestone-2` but only LightGB
 ## Baseline Model Training, Evaluation, and Predictions
 
 <p align="justify">
-The baseline models used were <code>LGBMRegressor</code> for LightGBM and <code>XGBRegressor</code> for XGBoost. Each of the models were initialized with the default hyperparameters with the exception of setting <code>random_state=123</code>. 5-fold cross-validation was implemented in the training process. The metrics used for evaluation of the model's performance after fitting were cross-validation scores, R-squared scores, and root mean square error scores.
+The baseline models used were <code>LGBMRegressor</code> for LightGBM and <code>XGBRegressor</code> for XGBoost. Each of the models were initialized with the default hyperparameters with the exception of setting <code>random_state=123</code>. 5-fold cross-validation was implemented in the training process. The metrics used for evaluation of the model's performance after fitting were cross-validation ($CV$) scores, R-squared scores ($R^2$), and root mean square error ($RMSE$) scores.
 </p>
 
-Note: Recall that for `milestone-2`, a logarithmic transformation was implemented for `SalePrice` and is thus reflected in RMSE scores.
+Note: Recall that for `milestone-2`, a logarithmic transformation was implemented for `SalePrice` and is thus reflected in $RMSE$ scores.
 
 <p align="justify">
 Even with a log transformed <code>SalePrice</code>, there did not appear to be significant differences between each milestone's <code>LGBMRegressor</code> scores. There is, however, a noticeable difference, albeit small, in overall scores between <code>LGBMRegressor</code> and <code>XGBRegressor</code> where the LightGBM model performed better than the XGBoost model.
@@ -457,7 +457,15 @@ Plotting SHapley Additive exPlanations (SHAP) values is a great method for model
 This documenation will not provide screenshots of each SHAP visualization plotted for both <code>milestone-2</code> and <code>milestone-3</code>, since displaying only the SHAP plots generated in <code>milestone-3</code> should be sufficient in the discussion of each of the different plots' use and interpretation. Refer to the links of the <code>Milestone 2 Documentation</code> and <code>Milestone 3 Documentation</code> located in the <code>README.md</code> of branch <code>milestone-4</code>.
 </p>
 
+<p align="justify">
+The core explainer API that this project uses is <code>TreeExplainer</code>, since not only is it fast, it is well-suitable for computing SHAP values of tree-based models. The choice of having the explainer grab SHAP values from either the training set or test set is made for whichever data is preferred to be analyzed. The point of interest for this project, in particular, is to view the interpretations of the training set <code>X_train</code>. The <a href="https://github.com/GHcpv24/CS634-Data-Mining/blob/milestone-4/CS634_CVega_Notebook.ipynb">notebook</a>, however, does provide code (though commented out) to plot the SHAP values explaining the test set <code>X_test</code>. Feel free run the code for your interest.
+</p>
+
 - Bar plot
+  
+   <p align="justify">
+   For LightGBM, the bar plot serves as feature importance plots, where the features are displayed on the left-hand side and ranked with the most influential feature at the top down to the least influential feature at the bottom. In this    particular case, however, the SHAP bar plot displays a maximum of 10 features - the bottom-most feature representing a sum of the remaining 71 features. The mean absolute SHAP values - the average magnitude of each feature's impact on    the model's predicted house <code>SalePrice</code> across all instances - determine the ranking of the features. Throughout the entirety of the project, the feature <code>OverallQual</code> was the most impactful, and is the case as illustrated by all the different plots. This is unsurprising given a reasonable expectation that a house's overall quality rating would have a significant impact on the sales price of the house in question.
+   </p>
 
 <p align="center">
 <img src="/docs/img/bar1.png">
@@ -465,11 +473,23 @@ This documenation will not provide screenshots of each SHAP visualization plotte
 
 - Beeswarm plot
 
+  <p align="justify">
+   Beeswarm plots function similarly to the bar plots as you will find the feature importance ranking by most influential at the top down to the least influential at the bottom. The difference is that beeswarm plots provide additional information by displaying the relationship between the model's prediction and the relative feature importance. More specifically, you will find that the each SHAP value (each point) is distributed horizontally according to their respective SHAP value as well as stacked vertically to show the density of the SHAP values. Each of these points are assigned a color corresponding to the feature's raw values, with red indicating a high feature value and blue a low feature value. The directionality impact of each feature - the general relationship between the raw values and SHAP values - provide valuable insights by examining the color distribution.
+  </p>
+
+  <p align="justify">
+   In the case of <code>OverallQual</code>, the feature with the highest impact for both models, a higher overall quality value leads to positive SHAP values indicating that a houses with high overall quality have higher sales prices predicted. Interestingly, for the XGBoost model in <code>milestone-2</code>, the feature <code>GarageType</code> has the reverse situation - where a lower <code>GarageType</code> value leads to higher house sales price prediction.
+  </p>
+
 <p align="center">
 <img src="/docs/img/beeswarm1.png">
 </p>
 
 - Waterfall plot
+
+  <p align="justify">
+   The ability to provide a more detailed breakdown of each feature's contribution towards the prediction of house <code>SalePrice</code> makes waterfall plots great visualization tools. The waterfall structure places emphasis on the additive nature of the positive and negative impacts built on the base value $E[f(X)]$ (the expected value of the house sales price model output) for yielding the specified model's prediction $f(X)$. In other words, each feature depicts the direction of the positive (red) or negative (blue) contribution by which the values are moved from the expected model output over the dataset to the model prediction output. As an example, you will find that tThe top contributor, <code>OverallQual</code> "pushes" the prediction of the sale price to be low. This could be considered reasonable given that the year is 1996 and overall quality is 5.
+  </p>
 
 <p align="center">
 <img src="/docs/img/waterfall1.png">
@@ -477,16 +497,23 @@ This documenation will not provide screenshots of each SHAP visualization plotte
 
 - Force plot
 
+  <p align="justify">
+   Force plots also illustrate the manner in which each feature "pushes" the model towards either a higher or lower <code>SalePrice</code>, but in a more condensed display. Again, the feature <code>OverallQual</code> can be found to be the most impactful as well as found to be "pushing" the prediction towards a lower sale price.
+  </p>
+
 <p align="center">
 <img src="/docs/img/force1.png">
 </p>
 
 - Shap interaction plots
 
+  <p align="justify">
+   Below images display 2 different types of plots, however, both hone in on SHAP interaction values. The first type of plot shown is a dependence plot. The top 5 features contributing the most to the model's prediction (according to what was shown on the bar plots) were chosen to be examined for the dependence plots. In the first plot shown below, you can view the interaction effects of the features <code>OverallQuall</code> and <code>GrLivArea</code>, and each of the 5 dependence plots reveals interesting trends. The second type of plot displays the effects in the form of a matrix, with the main effects illustrated on the diagonal and the interaction effects illustrated on the off-diagonal. 
+  </p>
+
 <p align="center">
 <img src="/docs/img/depend1-1.png">
 </p>
-
 <p align="center">
 <img src="/docs/img/depend1-2.png">
 </p>
