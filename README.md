@@ -35,10 +35,10 @@ The goal of Milestone 2 is to predict house sales price, i.e. `SalePrice`. The d
 
 Ensure that you have the necessary dependencies and a compatible environment. To run the code, you need to install the required packages. Run the following command to install the necessary packages (if not already installed):
 
-```
+```py
 !pip install shap
 ```
 
-```
+```py
 !pip install Kaggle
 ```
