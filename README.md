@@ -29,6 +29,8 @@ Create a video that will demonstrate the app. The video should be no longer than
 
 # Demo
 
+(Note: You may need be required to unmute the video...)
+
 https://github.com/GHcpv24/CS-634-Data-Mining/assets/106451112/e0d2fba9-7747-4ab1-9c30-9b3d0a9550d1
 
 # Introduction
