@@ -48,26 +48,28 @@ NJIT Summer 2023 <br> CS 634 Data Mining <br> Interpretable Gradient Boosting - 
 
    5.2 [Missing Values and Categorical Features](#missing-values-and-categorical-features)
 
-6. [Baseline](#baseline)
+6. [Split Training and Test Sets](#split-training-and-test-sets)
 
-   6.1 [Baseline Model Training and Evaluation](#baseline-model-training-and-evaluation)
+7. [Baseline](#baseline)
+
+   7.1 [Baseline Model Training, Evaluation, and Predictions](#baseline-model-training-evaluation-and-predictions)
    
-   6.2 [Baseline SHAP Summary and Interaction Plots](#baseline-shap-summary-and-interaction-plots)
+   7.2 [Baseline SHAP Summary and Interaction Plots](#baseline-shap-summary-and-interaction-plots)
 
-7. [Hyperparameter Optimization via Optuna](#hyperparameter-optimization-via-optuna)
+8. [Hyperparameter Optimization via Optuna](#hyperparameter-optimization-via-optuna)
 
-   7.1 [Tuned Model Training and Evaluation](#tuned-model-training-and-evaluation)
+   8.1 [Tuned Model Training, Evaluation, and Predictions](#tuned-model-training-evaluation-and-predictions)
 
-   7.2 [Tuned SHAP Summary and Interaction Plots](#tuned-shap-summary-and-interaction-plots)
+   8.2 [Tuned SHAP Summary and Interaction Plots](#tuned-shap-summary-and-interaction-plots)
 
-8. [HuggingFace Streamlit App](#huggingface-streamlit-app)
+9. [HuggingFace Streamlit App](#huggingface-streamlit-app)
 
-   8.1 [App Results](#app-results)
+   9.1 [App Results](#app-results)
 
-9. [App Landing Page](#app-landing-page)
-10. [Demo](#demo)
-11. [Conclusion](#conclusion)
-12. [References](#references)
+10. [App Landing Page](#app-landing-page)
+11. [Demo](#demo)
+12. [Conclusion](#conclusion)
+13. [References](#references)
 
 # Abstract
 
@@ -377,7 +379,7 @@ In general, a skewed distribution could greatly affect the model due to variabil
 For <code>milestone-3</code>, however, there was no logarithmic transformation done for the target variable <code>SalePrice</code>. Details behind the reasoning will be provided in the section containing model evaluations.
 </p>
 
-## Missing Values and Categorial Features
+## Missing Values and Categorical Features
 
 <p align="justify">
 Missing values aren't handled only because most algorithms do not support missing values, but also because missings values can introduce a loss of power. Strategies must be put into place for handling missing values appropriately. One such strategy that is used in this project is mean imputation, that is, for the numerical features. For categorical features (or features that contain non-numeric values), the text "missing" replaced the missing values.
@@ -387,17 +389,115 @@ Missing values aren't handled only because most algorithms do not support missin
 Continuing on the topic of categorical features, it is necessary to encode them in order to convert them into respective numerical representations, most especially when an algorithm will be requiring numerical input. <code>LabelEncoder</code> was used to handle the encoding of the categorical features.
 </p>
 
+# Split Training and Test Sets
+
+<p align="justify">
+After completion of data cleaning and preprocessing comes another important step prior to building a model: splitting the dataset into training and test sets. The train-test split procedure is essential in the training of the model - allowing for evaluation of the model's performance on data that it has not yet been trained on. On one hand, the <code>train.csv</code> file will be used to train and develop the model and will be split into 70% training data and 30% test data. On the other hand, the <code>test.csv</code> file will be used after the model has been trained and for printing the house sale price predictions.
+</p>
+
 # Baseline
 
+Both XGBoost and LightGBM models were utilized in `milestone-2` but only LightGBM was utilized for `milestone-3`.
 
+## Baseline Model Training, Evaluation, and Predictions
 
-## Baseline Model Training and Evaluation
+<p align="justify">
+The baseline models used were <code>LGBMRegressor</code> for LightGBM and <code>XGBRegressor</code> for XGBoost. Each of the models were initialized with the default hyperparameters with the exception of setting <code>random_state=123</code>. 5-fold cross-validation was implemented in the training process. The metrics used for evaluation of the model's performance after fitting were cross-validation scores, R-squared scores, and root mean square error scores.
+</p>
+
+Note: Recall that for `milestone-2`, a logarithmic transformation was implemented for `SalePrice` and is thus reflected in RMSE scores.
+
+<p align="justify">
+Even with a log transformed <code>SalePrice</code>, there did not appear to be significant differences between each milestone's <code>LGBMRegressor</code> scores. There is, however, a noticeable difference, albeit small, in overall scores between <code>LGBMRegressor</code> and <code>XGBRegressor</code> where the LightGBM model performed better than the XGBoost model.
+</p>
+
+`milestone-2` scores:
+
+<p align="center">
+<img src="/docs/img/comparison.png">
+</p>
+
+`milestone-3` scores:
+
+<p align="center">
+<img src="/docs/img/baseline-eval.png">
+</p>
+
+Now, predictions can be made by utilizing the trained model on the `test.csv` data.
+
+Note: To ensure that `SalePrice` reverted to its original formatting, an exponential transformation was implemented.
+
+`milestone-2` predictions:
+
+<p align="center">
+<img src="/docs/img/lgbmr-pred.png">
+</p>
+
+<p align="center">
+<img src="/docs/img/xgbr-pred.png">
+</p>
+
+`milestone-3` predictions:
+
+<p align="center">
+<img src="/docs/img/baseline-pred.png">
+</p>
+
+<p align="justify">
+Looking at `Id` and `SalePrice` alone for the model's predictions will not provide sufficient information for understanding the underlying factors that impacted (or influenced) the resulting prediction on house sale price. Model interpretability is where SHapley Additive exPlanations plots come in (as you will see in the next section).
+</p>
 
 ## Baseline SHAP Summary and Interaction Plots
 
+<p align="justify">
+Plotting SHapley Additive exPlanations (SHAP) values is a great method for model explainability. To be more specific, SHAP applies a game theory approach for explaining the output of a model with the ability to display both global and local explanations.
+</p>
+
+<p align="justify">
+This documenation will not provide screenshots of each SHAP visualization plotted for both <code>milestone-2</code> and <code>milestone-3</code>, since displaying only the SHAP plots generated in <code>milestone-3</code> should be sufficient in the discussion of each of the different plots' use and interpretation. Refer to the links of the <code>Milestone 2 Documentation</code> and <code>Milestone 3 Documentation</code> located in the <code>README.md</code> of branch <code>milestone-4</code>.
+</p>
+
+- Bar plot
+
+<p align="center">
+<img src="/docs/img/bar1.png">
+</p>
+
+- Beeswarm plot
+
+<p align="center">
+<img src="/docs/img/beeswarm1.png">
+</p>
+
+- Waterfall plot
+
+<p align="center">
+<img src="/docs/img/waterfall1.png">
+</p>
+
+- Force plot
+
+<p align="center">
+<img src="/docs/img/force1.png">
+</p>
+
+- Shap interaction plots
+
+<p align="center">
+<img src="/docs/img/depend1-1.png">
+</p>
+
+<p align="center">
+<img src="/docs/img/depend1-2.png">
+</p>
+
+<p align="center">
+<img src="/docs/img/interact1.png">
+</p>
+
 # Hyperparameter Optimization via Optuna
 
-## Tuned Model Training and Evaluation
+## Tuned Model Training, Evaluation, and Predictions
 
 ## Tuned SHAP Summary and Interaction Plots
 
