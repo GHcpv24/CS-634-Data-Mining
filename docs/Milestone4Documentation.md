@@ -1,7 +1,7 @@
 # CS-634-Data-Mining
 
 <p align="center">
-<img src="/docs/img/target-distr.png">
+<img src="/docs/img/njitlogo.png">
 </p>
 
 <p align="center">
