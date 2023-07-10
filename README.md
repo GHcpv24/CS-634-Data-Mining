@@ -2,7 +2,7 @@
 
 ---
 
-## Links
+# Links
 
 - [Kaggle Dataset](https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques/overview)
 
@@ -18,13 +18,25 @@
 
 ---
 
-## Interpretable Gradient Boosting - Real Estate House Price Prediction
+# Milestones
+
+- [Milestone 1](https://github.com/GHcpv24/CS634-Data-Mining/tree/milestone-1)
+  
+- [Milestone 2](https://github.com/GHcpv24/CS634-Data-Mining/tree/milestone-2)
+  
+- [Milestone 3](https://github.com/GHcpv24/CS634-Data-Mining/tree/milestone-3)
+  
+- [Milestone 4](https://github.com/GHcpv24/CS634-Data-Mining/tree/milestone-4)
+
+---
+
+# Interpretable Gradient Boosting - Real Estate House Price Prediction
 
 Ask a home buyer to describe their dream house, and they probably won’t begin with the height of the basement ceiling or the proximity to an east-west railroad. But this playground competition’s dataset proves that much more influences price negotiations than the number of bedrooms or a white-picket fence. With 79 explanatory variables describing (almost) every aspect of residential homes in Ames, Iowa, this competition challenges you to predict the final price of each home.
 
 <br>
 
-### Milestone 1: (Week 1, 10 points)
+## Milestone 1: (Week 1, 10 points)
 
 Set up a development environment in your laptop. Learn the basics of docker by watching the following video:
 
@@ -38,7 +50,7 @@ Submit the github repository URL with a branch titled ‘milestone-1’ with the
 
 <br>
 
-### Milestone 2: (Week 3, 40 points)
+## Milestone 2: (Week 3, 40 points)
 
 Download the dataset from [here](https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques/overview)
 
@@ -50,7 +62,7 @@ Perform the SHAP interpretation of the house price prediction model of your choi
 
 <br>
 
-### Milestone 3: (Week 4, 30 points)
+## Milestone 3: (Week 4, 30 points)
 
 Merge the earlier branch into the main branch and create a new branch titled ‘milestone-3. Do not delete the milestone-2 branch.
 
@@ -62,7 +74,7 @@ Submit the github repository URL with a branch titled ‘milestone-3’ with the
 
 <br>
 
-### Milestone 4: Documentation and Video Production (Week 5, 20 points)
+## Milestone 4: Documentation and Video Production (Week 5, 20 points)
 
 Merge the earlier branch into the main branch and create a new branch titled ‘milestone-4’. Do not delete the milestone-3 branch.
 
