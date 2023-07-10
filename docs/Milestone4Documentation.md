@@ -83,7 +83,7 @@ Provided within this documentation are extensive accounts of my methodology, fin
 
 ## Approach
 <p align="justify">
-Due to the sheer variety and number of factors that affect house pricing, determining the sale price of a house if often challenging - a problem faced by realtors, homeowners, and buyers alike. Thus, the project aims to build a machine learning model that, based on the dataset, can predict the sale price of a house - being aware that machine learning can offer promising solutions to tackle the prediction challenge and task at hand. The models utilized in this project are LightGBM and XGBoost, whereas SHAP plots are used for interpretable (or explainable) machine learning. Optimization will be explored as well as the development of the HuggingFace streamlit app which provides an interface for users to experiment with the trained models. Prior to taking on these steps, however, are the Exploratory Data Analysis and data preprocessing steps, which will be discussed shortly.
+Due to the sheer variety and number of factors that affect house pricing, determining the sale price of a house is often challenging - a problem faced by realtors, homeowners, and buyers alike. Thus, the project aims to build a machine learning model that, based on the dataset, can predict the sale price of a house - being aware that machine learning can offer promising solutions to tackle the prediction challenge and task at hand. The models utilized in this project are LightGBM and XGBoost, whereas SHAP plots are used for interpretable (or explainable) machine learning. Optimization will be explored as well as the development of the HuggingFace streamlit app which provides an interface for users to experiment with the trained models. Prior to taking on these steps, however, are the Exploratory Data Analysis and data preprocessing steps, which will be discussed shortly.
 </p>
 
 ## Dataset
@@ -623,19 +623,102 @@ There were changes in the ranking of feature importance where, taking the top 5 
 
 # HuggingFace Streamlit App
 
+<p align="justify">
+Finally, after having completed the training of the baseline LightGBM model and the LightGBM model tuned with Optuna and having evaluated each model with the test set, it was time to move on to creating a HuggingFace streamlit app. The app is designed to provide an interactive interface deployed on HuggingFace Spaces for users to further explore the housing sale price predictions, allowing users to input the relevant housing features (i.e. year built, number of beds, etc.) and obtain sale price predictions and SHAP visualizations based on the two trained LightGBM models. The method of inputting the features of the house is by means of sliders and generation of the predictions and SHAP visualizations are done by the click of the "Generate House Price" button.
+</p>
+
+Preview of the app below:
+
+<p align="center">
+<img src="/docs/img/app_preview.png">
+</p>
+
+<p align="justify">
+Now, the first steps that need to be taken in order to create the house sale price prediction streamlit app on HuggingFace are to save the two trained models: the trained baseline LightGBM model and the trained LightGBM model tuned with Optuna. This project proposes using the Python <code>pickle</code> $^7$ library. The other two important files that must be prepared in order to develop the app are <code>requirements.txt</code> and <code>app.py</code> files.
+</p>
+
+<p align="justify">
+The <code>requirements.txt</code> file should contain the specific dependencies required by your app listed for all packages (and versions if necessary) that will need to be installed for your app to be deployed properly. The dependencies necessary for this project, in particular, are as follows:
+</p>
+
+```py
+streamlit
+pandas
+numpy
+matplotlib
+lightgbm
+shap
+```
+
+<p align="justify">
+The HuggingFace Spaces platform looks for and requires an <app.py> file as an entry point for deployment of the streamlit app. Moreover, the file must contain the main code defining the behavior of the app, including loading the trained baseline LightGBM model and trained LightGBM model tuned with Optuna that were both saved by <code>pickle</code>, any data preprocessing, and the user interface components.
+</p>
+
+Once ready for deployment, you will need to wait for your app to be in `Running` status.
+
+<p align="center">
+<img src="/docs/img/hfrun.png">
+</p>
+
+From viewing your running app you should be notified of any errors, if any. If no errors, congrats! Otherwise, debug.
+
 ## App Results
 
+Below you will find example results from this project's HuggingFace Spaces streamlit app:
+
+- Baseline LightGBM housing sale price predictions and SHAP plots
+
+<p align="center">
+<img src="/docs/img/app_base1.png">
+</p>
+
+<p align="center">
+<img src="/docs/img/app_base2.png">
+</p>
+
+<p align="center">
+<img src="/docs/img/app_base3.png">
+</p>
+  
+- Optimized LightGBM housing sale price predictions and SHAP plots
+
+<p align="center">
+<img src="/docs/img/app_tuned1.png">
+</p>
+
+<p align="center">
+<img src="/docs/img/app_tuned2.png">
+</p>
+
+<p align="center">
+<img src="/docs/img/app_tuned3.png">
+</p>
+
 # App Landing Page
+
+<p align="justify">
+At this point of the project, all milestones from #1 to #3 should be completed and the project has reached the final stages. What better way to finalize the project than with creating a Google sites landing page to serve as the central hub to share the project details. You will find a preview of both the landing page and app in the next section featuring the demo video. (Reminder: links are provided at the beginning of the documentation)
+</p>
 
 # Demo
 
 (Note: You may need be required to unmute the video...)
 
-The below demo features a HuggingFace streamlit app that references the code provided in [this repo](https://github.com/adhok/streamlit_ames_housing_price_prediction_app) by Pradeep Adhokshaja.
+The below demo features a HuggingFace streamlit app that references the code provided in [this repo](https://github.com/adhok/streamlit_ames_housing_price_prediction_app) by Pradeep Adhokshaja $^8$.
 
 https://github.com/GHcpv24/CS634-Data-Mining/assets/106451112/39573996-deeb-4086-9a8b-6cf33b9397d9
 
 # Conclusion
+
+<p align="justify">
+The project served as an effective method for developing a predictive model and interpretable framework that could be used for housing sales price predictions based off the data representing real estate housing from Ames, Iowa. The  relatively decent real estate housing sales price predictions were made possible by leveraging machine learning techniques, including EDA, data preprocessing, development of XGBoost and LightGBM models, model optimization, and explainability through SHAP plots. The culmination of all efforts towards the project were showcased in the final stages by manner of developing the HuggingFace Spaces streamlit app and creating a landing page for centralization of project details.
+</p>
+
+<p align="justify">
+Overall, this project highlights and demonstrates the effectiveness of machine learning in the real estate sector, particularly in predicting housing sales prices. Through a combination of model predictions and interpretability through visualizations, a powerful tool can be created with the potential to aid various realtors, homeowners, and buyers in making well-informed decisions regarding the purchasing, selling, or valuation of housing properties and assets.
+</p>
+
+In the near future, I hope to revisit this project again for further experiments.
 
 # References
 
@@ -651,4 +734,6 @@ https://github.com/GHcpv24/CS634-Data-Mining/assets/106451112/39573996-deeb-4086
 
 [6] Kaggle, House Prices - Advanced Regression Techniques, https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques/overview
 
-[7] Github user adhok, streamlit_ames_housing_price_prediction_app by Pradeep Adhokshaja, https://github.com/adhok/streamlit_ames_housing_price_prediction_app
+[7] Python, Pickle Documentation, https://docs.python.org/3/library/pickle.html
+
+[8] Github user adhok, streamlit_ames_housing_price_prediction_app by Pradeep Adhokshaja, https://github.com/adhok/streamlit_ames_housing_price_prediction_app
