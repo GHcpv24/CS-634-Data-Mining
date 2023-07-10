@@ -76,7 +76,7 @@ NJIT Summer 2023 <br> CS 634 Data Mining <br><br> Interpretable Gradient Boostin
 # Abstract
 
 <p align="justify">
-Provided within this documentation are extensive accounts of my methodology, findings, and insightss. The Interpretable Gradient Boosting - Real Estate House Price Prediction Project leveraged machine learning techniques to develop a predictive model and interpretable framework that can accurately predict housing sales prices (target variable: <code>SalePrice</code> based on various Ames, Iowa housing features (79 to be exact) such as year built, area square footage, number of bedrooms, etc. In <code>milestone-1</code>, the task was to get familiar with <code>Docker</code>. The machine learning models XGBoost $^1$ and LightGBM $^2$ were built in <code>milestone-2</code> as baseline models along with creating SHapley Additive exPlanations $^3$ plots, whereas <code>milestone-3</code> built upon the previous milestone by performing hyperparamter optimization with Optuna $^4$ and added the creating of the HuggingFace streamlit app $^5$. For the final milestone, <code>milestone-4</code>, the task was to finalize the project by means of extensive documentation, creating a Google Sites landing page for the streamlit app, and producing a demo video of the app.
+The Interpretable Gradient Boosting - Real Estate House Price Prediction Project leveraged machine learning techniques to develop a predictive model and interpretable framework that can accurately predict housing sales prices (target variable: <code>SalePrice</code>) based on various Ames, Iowa housing features (79 to be exact) such as year built, area square footage, number of bedrooms, etc. In <code>milestone-1</code>, the task was to get familiar with <code>Docker</code>. The machine learning models XGBoost $^1$ and LightGBM $^2$ were built in <code>milestone-2</code> as baseline models along with creating SHapley Additive exPlanations $^3$ plots, whereas <code>milestone-3</code> built upon the previous milestone by performing hyperparamter optimization with Optuna $^4$ and added the step of creating the HuggingFace streamlit app $^5$. For the final milestone, <code>milestone-4</code>, the task was to finalize the project by means of extensive documentation, creating a Google Sites landing page for the streamlit app, and producing a demo video of the app. Provided within this documentation are accounts of the project's methodology, findings, and insights.
 </p>
 
 # Introduction
@@ -283,7 +283,7 @@ Ensure that you have the necessary dependencies and a compatible environment. Fo
 ## Import Libraries and Load Dataset
 
 <p align="justify">
-The first step is the upload your Kaggle API credentials. If running in a Google Colab environment such as this project, use the following command:
+The first step is to upload your Kaggle API credentials. If running in a Google Colab environment such as this project, use the following command:
 </p>
 
 ```py
@@ -302,7 +302,7 @@ Then download and unzip the dataset by running the below lines of code:
 ```
 
 <p align="justify">
-Now, with the environment set up, the necessary libraries are imported and the Kaggle housing dataset is loaded for exploration, preprocessing, and eventually building the machine learning models.
+Now, with the environment set up, the necessary libraries are to be imported (such as below) in order for the Kaggle housing dataset to be loaded for exploration, preprocessing, and eventually leading to build the machine learning models.
 </p>
 
 ```py
@@ -364,13 +364,13 @@ By identifying the missing values, appropriate strategies can be devised to hand
 # Data Preprocessing
 
 <p align="justify">
-This next step is essential for ensuring data is cleaned, formatted, and structured in a way that facilitates the analysis process. Involved in this data preprocessing are handling missing values, encoding categorical features, and, if necessary, handling the distribution of the target variable `SalePrice`.
+This next step is essential for ensuring data is cleaned, formatted, and structured in a way that facilitates the analysis process. Involved in this data preprocessing are handling missing values, encoding categorical features, and, if necessary, handling the distribution of the target variable <code>SalePrice</code>.
 </p>
 
 ## Skewed Distribution
 
 <p align="justify">
-In general, a skewed distribution could greatly affect the model due to variability. Therefore, methods such as logarithmic transformations are applied to have the distributions approach a Normal distribution. Although LightGBM and XGBoost can handle skewed distributions quite well, in the case of <code>milestone-2</code>, logarithmic transformation on <code>SalePrice</code> was implemented in an attempt to discover possibilities of a noticeable difference in performance from the reduction of variability. Below you will find the new plot of `SalePrice` and will see how the distribution approaches a Normal distribution.
+In general, a skewed distribution could greatly affect the model due to variability. Therefore, methods such as logarithmic transformations are applied to have the distributions approach a Normal distribution. Although LightGBM and XGBoost can handle skewed distributions quite well, in the case of <code>milestone-2</code>, logarithmic transformation on <code>SalePrice</code> was implemented in an attempt to discover possibilities of a noticeable difference in performance from the reduction of variability. Below you will find the new plot of <code>SalePrice</code> and will see how the distribution approaches a Normal distribution.
 </p>
 
 <p align="center">
@@ -384,7 +384,7 @@ For <code>milestone-3</code>, however, there was no logarithmic transformation d
 ## Missing Values and Categorical Features
 
 <p align="justify">
-Missing values aren't handled only because most algorithms do not support missing values, but also because missings values can introduce a loss of power. Strategies must be put into place for handling missing values appropriately. One such strategy that is used in this project is mean imputation, that is, for the numerical features. For categorical features (or features that contain non-numeric values), the text "missing" replaced the missing values.
+Missing values are not handled only because most algorithms do not support missing values, but also because missings values can introduce a loss of power. Strategies must be put into place for handling missing values appropriately. One such strategy that is used in this project is mean imputation, that is, for the numerical features. For categorical features (or features that contain non-numeric values), the missing values are replaced by the word "missing".
 </p>
 
 <p align="justify">
@@ -456,7 +456,7 @@ Plotting SHapley Additive exPlanations (SHAP) values is a great method for model
 </p>
 
 <p align="justify">
-This documenation will not provide screenshots of each SHAP visualization plotted for both <code>milestone-2</code> and <code>milestone-3</code>, since displaying only the SHAP plots generated in <code>milestone-3</code> should be sufficient in the discussion of each of the different plots' use and interpretation. Refer to the links of the <code>Milestone 2 Documentation</code> and <code>Milestone 3 Documentation</code> located in the <code>README.md</code> of branch <code>milestone-4</code>.
+This documenation will not be providing screenshots of each SHAP visualization plotted for both <code>milestone-2</code> and <code>milestone-3</code>, since displaying only the SHAP plots generated in <code>milestone-3</code> should be sufficient in the discussion of each of the different plots' use and interpretation. Refer to the links of the <code>Milestone 2 Documentation</code> and <code>Milestone 3 Documentation</code> located in the <code>README.md</code> of branch <code>milestone-4</code>.
 </p>
 
 <p align="justify">
@@ -466,7 +466,7 @@ The core explainer API that this project uses is <code>TreeExplainer</code>, sin
 - Bar plot
   
    <p align="justify">
-   For LightGBM, the bar plot serves as feature importance plots, where the features are displayed on the left-hand side and ranked with the most influential feature at the top down to the least influential feature at the bottom. In this    particular case, however, the SHAP bar plot displays a maximum of 10 features - the bottom-most feature representing a sum of the remaining 71 features. The mean absolute SHAP values - the average magnitude of each feature's impact on    the model's predicted house <code>SalePrice</code> across all instances - determine the ranking of the features. Throughout the entirety of the project, the feature <code>OverallQual</code> was the most impactful, and is the case as illustrated by all the different plots. This is unsurprising given a reasonable expectation that a house's overall quality rating would have a significant impact on the sales price of the house in question.
+   For LightGBM, the bar plot serves as feature importance plots, where the features are displayed on the left-hand side and ranked with the most influential feature at the top down to the least influential feature at the bottom. In this    particular case, however, the SHAP bar plot displays a maximum of 10 features - the bottom-most feature representing a sum of the remaining 71 features. The mean absolute SHAP values - the average magnitude of each feature's impact on    the model's predicted house <code>SalePrice</code> across all instances - determine the ranking of the features. Throughout the entirety of the project, the feature <code>OverallQual</code> was the most impactful, and is the case as illustrated by all the different plots. This is unsurprising given a reasonable expectation that a house's overall quality rating would have a significant impact on the prediction of the sales price of the house in question.
    </p>
 
 <p align="center">
@@ -480,7 +480,7 @@ The core explainer API that this project uses is <code>TreeExplainer</code>, sin
   </p>
 
   <p align="justify">
-   In the case of <code>OverallQual</code>, the feature with the highest impact for both models, a higher overall quality value leads to positive SHAP values indicating that a houses with high overall quality have higher sales prices predicted. Interestingly, for the XGBoost model in <code>milestone-2</code>, the feature <code>GarageType</code> has the reverse situation - where a lower <code>GarageType</code> value leads to higher house sales price prediction.
+   In the case of <code>OverallQual</code>, the feature with the highest impact for the model, a higher overall quality value leads to positive SHAP values. In other words, a house with a with higher overall quality will have higher sales prices to be predicted. Interestingly, for the XGBoost model in <code>milestone-2</code>, the feature <code>GarageType</code> has the reverse situation - where a lower <code>GarageType</code> value leads to higher house sales price prediction.
   </p>
 
 <p align="center">
@@ -490,7 +490,7 @@ The core explainer API that this project uses is <code>TreeExplainer</code>, sin
 - Waterfall plot
 
   <p align="justify">
-   The ability to provide a more detailed breakdown of each feature's contribution towards the prediction of house <code>SalePrice</code> makes waterfall plots great visualization tools. The waterfall structure places emphasis on the additive nature of the positive and negative impacts built on the base value $E[f(X)]$ (the expected value of the house sales price model output) for yielding the specified model's prediction $f(X)$. In other words, each feature depicts the direction of the positive (red) or negative (blue) contribution by which the values are moved from the expected model output over the dataset to the model prediction output. As an example, you will find that tThe top contributor, <code>OverallQual</code> "pushes" the prediction of the sale price to be low. This could be considered reasonable given that the year is 1996 and overall quality is 5.
+   The ability to provide a more detailed breakdown of each feature's contribution towards the prediction of house <code>SalePrice</code> makes waterfall plots great visualization tools. The waterfall structure places emphasis on the additive nature of the positive and negative impacts built on the base value $E[f(X)]$ (the expected value of the house sales price model output) for yielding the specified model's prediction $f(X)$. In other words, each feature depicts the direction of the positive (red) or negative (blue) contribution by which the values are moved from the expected model output over the dataset to the model prediction output. As an example, you will find that the top contributor, <code>OverallQual</code> "pushes" the prediction of the sale price to be low. This could be considered reasonable given that the year is 1996 and overall quality is 5.
   </p>
 
 <p align="center">
@@ -531,7 +531,7 @@ The results for the baseline model appeared relatively decent. However, this pro
 </p>
 
 <p align="justify">
-Note: As understood by the <code>milestone-3</code> requirements, only LightGBM should be implemented from this milestone onwards. However, due to curiousity, the intial attempt to complete <code>milestone-3</code> including optimizing XGBoost along with LightGBM. Interestingly enough, it was found that after evaluating the comparisons of $CV$, $R^2$, and $RMSE$ scores for both models, XGBoost, or more specifically <code>XGBRegressor</code>, had performed better than <code>LGBMRegresor</code>, where the LightGBM had initially performed better than XGBoost as baseline models. Another way to put it is that prior to tuning, the LightGBM model performed better, but after tuning XGBoost had shown better results in overall scores.
+Note: As understood by the <code>milestone-3</code> requirements, only LightGBM should be implemented from this milestone onwards. However, due to curiousity, the intial attempt to complete <code>milestone-3</code> included optimizing XGBoost along with LightGBM. Interestingly enough, it was found that after evaluating the comparisons of $CV$, $R^2$, and $RMSE$ scores for both models, XGBoost, or more specifically <code>XGBRegressor</code>, had performed better than <code>LGBMRegresor</code>, where the LightGBM had initially performed better than XGBoost as baseline models. Another way to put it is that prior to tuning, the LightGBM model performed better, but after tuning XGBoost had shown better results in overall scores.
 </p>
 
 ## Tuned Model Training, Evaluation, and Predictions
@@ -624,7 +624,7 @@ There were changes in the ranking of feature importance where, taking the top 5 
 # HuggingFace Streamlit App
 
 <p align="justify">
-Finally, after having completed the training of the baseline LightGBM model and the LightGBM model tuned with Optuna and having evaluated each model with the test set, it was time to move on to creating a HuggingFace streamlit app. The app is designed to provide an interactive interface deployed on HuggingFace Spaces for users to further explore the housing sale price predictions, allowing users to input the relevant housing features (i.e. year built, number of beds, etc.) and obtain sale price predictions and SHAP visualizations based on the two trained LightGBM models. The method of inputting the features of the house is by means of sliders and generation of the predictions and SHAP visualizations are done by the click of the "Generate House Price" button.
+Finally, after having completed the training of the baseline LightGBM model and the LightGBM model tuned with Optuna, and then having evaluated each model with the test set, it was time to move on to creating a HuggingFace streamlit app. The app is designed to provide an interactive interface deployed on HuggingFace Spaces for users to further explore the housing sale price predictions, allowing users to input the relevant housing features (i.e. year built, number of beds, etc.) and obtain sale price predictions and SHAP visualizations based on the two trained LightGBM models. The method of inputting the features of the house is by means of sliders and generation of the predictions and SHAP visualizations are done by the click of the "Generate House Price" button.
 </p>
 
 Preview of the app below:
@@ -651,7 +651,7 @@ shap
 ```
 
 <p align="justify">
-The HuggingFace Spaces platform looks for and requires an <app.py> file as an entry point for deployment of the streamlit app. Moreover, the file must contain the main code defining the behavior of the app, including loading the trained baseline LightGBM model and trained LightGBM model tuned with Optuna that were both saved by <code>pickle</code>, any data preprocessing, and the user interface components.
+The HuggingFace Spaces platform looks for and requires a specific file as an entry point for deployment of the streamlit app - the <code>app.py</code> file. Moreover, this file must contain the main code defining the behavior of the app, including loading the trained baseline LightGBM model and trained LightGBM model tuned with Optuna that were both saved by <code>pickle</code>, any necessary data preprocessing, and the user interface components.
 </p>
 
 Once ready for deployment, you will need to wait for your app to be in `Running` status.
@@ -660,7 +660,7 @@ Once ready for deployment, you will need to wait for your app to be in `Running`
 <img src="/docs/img/hfrun.png">
 </p>
 
-From viewing your running app you should be notified of any errors, if any. If no errors, congrats! Otherwise, debug.
+Additionally, from viewing your running app you should be notified of any errors, if any.
 
 ## App Results
 
