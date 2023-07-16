@@ -4,9 +4,9 @@
 
 # Links
 
-- Crop Yield Estimation Notebook
+- [Crop Yield Estimation Notebook](https://github.com/GHcpv24/CS634-Data-Mining/blob/Assignments/Assignment%203/CS634_CVega_Assignment3_CropYieldEstimation.ipynb)
 
-- Transfer Learning Notebook
+- [Transfer Learning Notebook](https://github.com/GHcpv24/CS634-Data-Mining/blob/Assignments/Assignment%203/CS634_CVega_Assignment3_TransferLearning.ipynb)
 
 ---
 
